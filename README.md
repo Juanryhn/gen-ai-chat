@@ -75,22 +75,6 @@ OPENAI_API_KEY=your_openai_api_key_here
 - State updates use functional patterns to avoid race conditions
 - Ensure \`Message\` type is imported, not redefined
 
-## 📦 Build & Deploy
-
-\`\`\`bash
-npm run build
-npm start
-\`\`\`
-
-Optimized for deployment on Vercel or similar Next.js-compatible platforms.
-
-## 🛠️ TODO
-
-- [ ] Add markdown rendering to AI output
-- [ ] Integrate message streaming
-- [ ] Improve mobile responsiveness
-- [ ] Add persistent chat history
-
 ## 📄 License
 
 MIT
