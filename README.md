@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChatGPT-like AI Chat App
 
-## Getting Started
+A conversational AI web application built with **Next.js** and **TypeScript**, integrating a large language model API with a modern React-based frontend.
 
-First, run the development server:
+## 🔧 Tech Stack
 
-```bash
+- **Next.js** (App Router)
+- **TypeScript**
+- **React Context API** – global chat state
+- **Gemini API** – language model integration
+- **Tailwind CSS** – utility-first UI styling
+
+## 📁 Project Structure
+
+\`\`\`
+src/
+├── app/                  # App Router entry points
+├── components/           # UI components
+├── contexts/
+│   └── ChatContext.tsx   # Message and AI state
+├── lib/                  # API client utilities
+├── types/                # Shared type definitions
+└── styles/               # Global CSS (Tailwind)
+\`\`\`
+
+## 📌 Message Type (Centralized)
+
+Defined in \`src/types/index.ts\`:
+
+\`\`\`ts
+export type Message = {
+  id: string
+  role: 'user' | 'ai'
+  content: string
+}
+\`\`\`
+
+Import wherever needed:
+
+\`\`\`ts
+import type { Message } from '@/types'
+\`\`\`
+
+Avoid redeclaration to maintain type integrity across modules.
+
+## ✨ Features
+
+- Chat interface with multi-turn conversation
+- Role-tagged messages (\`user\` / \`ai\`)
+- Centralized state via React Context
+- Modular, type-safe architecture
+- Fast, responsive UI with Tailwind
+
+## 🚀 Getting Started
+
+\`\`\`bash
+# Install dependencies
+npm install
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create \`.env.local\`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`env
+OPENAI_API_KEY=your_openai_api_key_here
+\`\`\`
 
-## Learn More
+## 🧪 Development Notes
 
-To learn more about Next.js, take a look at the following resources:
+- All components follow single-file principle
+- State updates use functional patterns to avoid race conditions
+- Ensure \`Message\` type is imported, not redefined
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Build & Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
 
-## Deploy on Vercel
+Optimized for deployment on Vercel or similar Next.js-compatible platforms.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ TODO
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Add markdown rendering to AI output
+- [ ] Integrate message streaming
+- [ ] Improve mobile responsiveness
+- [ ] Add persistent chat history
+
+## 📄 License
+
+MIT
