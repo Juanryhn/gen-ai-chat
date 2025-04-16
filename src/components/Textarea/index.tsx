@@ -7,7 +7,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     <textarea
       ref={ref}
       rows={1}
-      className={`w-full resize-none rounded-xl border border-gray-300 p-3 text-sm focus:border-blue-500 focus:outline-none ${className} text-black`}
+      className={`w-full resize-none rounded-xl border border-gray-300 p-3 text-sm focus:border-[#eebbc3] focus:outline-none ${className} text-white`}
       {...props}
     />
   )

@@ -51,7 +51,7 @@ const ChatForm = ({ onSend }: { onSend?: (e: string) => void }) => {
   return (
     <form
       onSubmit={handleSubmit(handleSend)}
-      className="w-[90%] mx-auto bg-white p-4 rounded-4xl"
+      className="w-[90%] mx-auto bg-[#232946] p-4 rounded-4xl"
     >
       <div className="flex items-center gap-2">
         <Textarea

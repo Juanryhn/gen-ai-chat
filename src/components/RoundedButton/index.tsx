@@ -7,7 +7,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 export default function RoundedButton({ children, className = "", ...props }: ButtonProps) {
   return (
     <button
-      className={`shrink-0 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 disabled:opacity-50 ${className}`}
+      className={`shrink-0 rounded-xl bg-[#eebbc3] px-4 py-2 text-black hover:bg-[#e89ca5] disabled:opacity-50 ${className}`}
       {...props}
     >
       {children}

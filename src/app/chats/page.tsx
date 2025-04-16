@@ -42,7 +42,7 @@ const ChatPage = () => {
           className={`mb-4 whitespace-pre-wrap text-black`}
         >
           {role === 'user' ? 
-          <div className="text-white p-2 rounded-lg bg-gray-600 max-w-[90%] justify-self-end">
+          <div className="text-[#232946] p-2 rounded-lg bg-[#b8c1ec] max-w-[90%] justify-self-end">
             <Markdown components={{ code: CodeBlock }}>{content}</Markdown>
           </div>
           : 
